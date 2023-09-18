@@ -31,3 +31,4 @@ configMapGenerator:
   literals:
   - p, automationuser, applications, *, armo-platform-stage-project/*, get
   - p, automationuser, projects, armo-platform-stage-project, get
+  - g, automationuser, role:readonly
