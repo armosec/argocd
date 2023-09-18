@@ -29,6 +29,6 @@ configMapGenerator:
 - behavior: merge
   name: argocd-rbac-cm
   literals:
-  - p, automationuser, applications, *, armo-platform-stage-project/*, get
-  - p, automationuser, projects, armo-platform-stage-project, get
-  - g, automationuser, role:readonly
+  - policy.automationuser.applications="*, armo-platform-stage-project/*, get"
+  - policy.automationuser.projects="armo-platform-stage-project, get"
+  - group.automationuser="role:readonly"
