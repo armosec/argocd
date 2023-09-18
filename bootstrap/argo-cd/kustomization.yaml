@@ -22,11 +22,3 @@ configMapGenerator:
   name: argocd-cm
   literals:
   - accounts.automationuser=apiKey, login
-
-configMapGenerator:
-- behavior: merge
-  name: argocd-rbac-cm
-  literals:
-  - policy.automationuser.applications="*, armo-platform-stage-project/*, get"
-  - policy.automationuser.projects="armo-platform-stage-project, get"
-  - group.automationuser="role:readonly"
