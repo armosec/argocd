@@ -24,5 +24,7 @@ configMapGenerator:
   - accounts.automationuser=apiKey, login
 - behavior: merge
   name: argocd-rbac-cm
-  policy.csv: |
+  literals: policy.csv= |
     g, automationuser, role:readonly
+
+   
