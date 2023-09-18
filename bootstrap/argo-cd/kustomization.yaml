@@ -16,3 +16,11 @@ namespace: argocd
 resources:
 - github.com/argoproj-labs/argocd-autopilot/manifests/base?ref=v0.4.16
 - ./ingress.yaml
+
+configMapGenerator:
+- behavior: merge
+  name: argocd-cm
+  literals:
+  - accounts.automationuser=apiKey, login
+  - accounts.devuser=apiKey, login
+  - accounts.qauser=apiKey, login
